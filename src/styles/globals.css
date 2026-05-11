@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background-color: #FAFAF8; color: #1A1A1A; line-height: 1.6; }
+h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+img { display: block; max-width: 100%; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #C0392B; border-radius: 10px; }
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-3 rounded-full font-medium text-base hover:bg-red-700 transition-all duration-300 cursor-pointer inline-block;
+  }
+  .btn-outline {
+    @apply border-2 border-white text-white px-8 py-3 rounded-full font-medium text-base hover:bg-white hover:text-primary transition-all duration-300 cursor-pointer inline-block;
+  }
+  .section-wrapper {
+    @apply max-w-6xl mx-auto px-6 py-20;
+  }
+  .section-heading {
+    @apply text-4xl font-heading text-dark text-center mb-4;
+  }
+  .section-subheading {
+    @apply text-muted text-center text-lg mb-12 max-w-xl mx-auto;
+  }
+}
